@@ -7,6 +7,7 @@ from PyQt5.uic import loadUiType # used loading ur ui after developing the proje
 import datetime  # to print current date and time
 from xlrd import *  # to write the data into excel folder
 from xlsxwriter import *
+import os
 
 ui,_ =loadUiType('library.ui')   # intializing sencondary main wwindow
 login,_ =loadUiType('login.ui')  # intializing login windows
@@ -878,10 +879,16 @@ class MainApp(QMainWindow ,ui):
             SELECT COUNT(*) FROM book;  
         ''',) # showing total number of books present in book table
         data=self.cur.fetchone()
+        self.db.close
         print(data)
         print("no of elements")
         print(data)
         self.lineEdit_21.setText(str(data))
+        
+
+        
+
+        
 
 
 
