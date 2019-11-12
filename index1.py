@@ -8,12 +8,12 @@ import datetime  # to print current date and time
 from xlrd import *  # to write the data into excel folder
 from xlsxwriter import *
 import os
+from login import Ui_Form
+from library import Ui_MainWindow
+  # intializing login windows
 
-ui,_ =loadUiType('library.ui')   # intializing sencondary main wwindow
-login,_ =loadUiType('login.ui')  # intializing login windows
 
-
-class login(QWidget ,login):
+class login(QWidget ,Ui_Form):
     def __init__(self):   # controls functionality of login ui
         QWidget.__init__(self)
         self.setupUi(self)
@@ -50,7 +50,7 @@ class login(QWidget ,login):
         self.setStyleSheet(style)
 
 
-class MainApp(QMainWindow ,ui):
+class MainApp(QMainWindow ,Ui_MainWindow):
     def __init__(self):
         QMainWindow.__init__(self)  # this funtion control the changes taking place in the ui
         self.setupUi(self)
