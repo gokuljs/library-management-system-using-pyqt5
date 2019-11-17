@@ -12,3 +12,13 @@
 9 run py index1.py
 10 for checking the requirements please type pip freeze will show u the package installed
 
+
+
+
+or 
+
+directly install the exe file after creating data base ;
+create data base library ;
+and import .sql file into the database
+
+
